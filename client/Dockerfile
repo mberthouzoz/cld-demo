@@ -5,7 +5,7 @@ MAINTAINER Michaël Berthouzoz
 # Install Node.js and other dependencies
 RUN yum -y update
 
-#RUN yum -y install git
+RUN yum -y install git
 
 #RUN yum -y install epel-release
 #RUN yum -y install nodejs
