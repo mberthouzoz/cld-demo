@@ -14,7 +14,3 @@ services:
     command: node index
     links:
       - db
-  app:
-    image: mberthouzoz/cld-client
-    ports:
-    - "80:80"

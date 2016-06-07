@@ -9,5 +9,5 @@
  */
 angular.module('cldDemoApp')
   .constant('APIConf', {
-    "url": "//192.168.99.100:8080/api"
+    "url": "//ec2-52-58-242-235.eu-central-1.compute.amazonaws.com:8080/api"
   });
