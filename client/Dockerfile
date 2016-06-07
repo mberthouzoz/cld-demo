@@ -45,4 +45,4 @@ RUN bower install --allow-root
 
 RUN grunt build --force
 
-RUN cp ./dist/* /var/www/
+RUN cp -R ./dist/* /var/www/
