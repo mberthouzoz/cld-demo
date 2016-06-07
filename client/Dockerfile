@@ -8,9 +8,11 @@ RUN apt-get install -y git
 
 RUN apt-get install -y nodejs npm
 
-RUN npm install bower
+RUN apt-get install -y curl wget
 
 RUN npm install -g grunt-cli
+
+RUN npm install --global bower
 
 RUN git clone "https://github.com/mberthouzoz/cld-demo.git"
 
