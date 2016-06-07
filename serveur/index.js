@@ -18,7 +18,7 @@ var customer = "`customer` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varcha
 
 var product = "`product` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(100) DEFAULT NULL, `price` float DEFAULT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
-var order = "`order` (`id` int(11) NOT NULL AUTO_INCREMENT, `customerId` int(11) DEFAULT NULL, `productId` int(11) DEFAULT NULL, `date` datetime DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (`id`), KEY `productId_idx` (`productId`), KEY `customerId_idx` (`customerId`), CONSTRAINT `customerId` FOREIGN KEY (`customerId`) REFERENCES `customer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION, CONSTRAINT `productId` FOREIGN KEY (`productId`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
+var order = "`order` (`id` int(11) NOT NULL AUTO_INCREMENT, `customerId` int(11) DEFAULT NULL, `productId` int(11) DEFAULT NULL, `qty` int(11), `date` datetime DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (`id`), KEY `productId_idx` (`productId`), KEY `customerId_idx` (`customerId`), CONSTRAINT `customerId` FOREIGN KEY (`customerId`) REFERENCES `customer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION, CONSTRAINT `productId` FOREIGN KEY (`productId`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
 connection.connect(function (err) {
     if (err) {

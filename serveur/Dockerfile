@@ -1,4 +1,5 @@
 FROM node:0.12.14-wheezy
+
 MAINTAINER Michael Berthouzoz
 
 RUN apt-get update
