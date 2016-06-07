@@ -4,11 +4,17 @@ MAINTAINER Michaël Berthouzoz
 
 RUN apt-get update
 
+RUN apt-get install -y git
+
+RUN apt-get install -y nodejs npm
+
 RUN git clone "https://github.com/mberthouzoz/cld-demo.git"
 
 WORKDIR cld-demo/client
 
 RUN npm install
+
+RUN npm install -g bower
 
 RUN bower install
 
