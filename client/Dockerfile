@@ -12,9 +12,9 @@ RUN git clone "https://github.com/mberthouzoz/cld-demo.git"
 
 WORKDIR cld-demo/client
 
-RUN npm install
+RUN npm install -g bower grunt-cli
 
-RUN npm install -g bower
+RUN npm install
 
 RUN bower install
 
