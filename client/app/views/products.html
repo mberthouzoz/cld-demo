@@ -1,0 +1,13 @@
+<section ng-init="find()">
+  <h1>Products</h1>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <tr ng-repeat="p in products">
+      <td>{{p.name}}</td>
+      <td>{{p.price | currency}}</td>
+    </tr>
+  </table>
+</section>
