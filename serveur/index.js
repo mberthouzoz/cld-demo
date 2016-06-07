@@ -87,6 +87,10 @@ router.get('/orders', function (req, res) {
     });
 });
 
+router.post('/orders', function (req, res) {
+    console.log(req, res);
+});
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
