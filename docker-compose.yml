@@ -1,0 +1,16 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345
+      - MYSQL_DATABASE=cld_demo
+    ports:
+     - "3306:3306"
+  server:
+    image:
+    ports:
+      - "8080:8080"
+    command: node index
+    links:
+      - db
