@@ -59,7 +59,7 @@ app.use(cors());
 
 console.log("Enable CORS");
 
-var port = process.env.PORT || 8080;        // set our port
+var port = 8080;        // set our port
 
 // ROUTES FOR OUR API
 // =============================================================================
