@@ -88,7 +88,7 @@ router.get('/orders', function (req, res) {
 });
 
 router.post('/orders', function (req, res) {
-    connection.query('INSERT INTO order VALUES(' + req.body['customerId'] + ', ' + req.body['productId'] + ', ' + req.body['qty'] + ');', function (err, results) {
+    connection.query('INSERT INTO order (customerId, productId, qty) VALUES(' + req.body['customerId'] + ', ' + req.body['productId'] + ', ' + req.body['qty'] + ');', function (err, results) {
         if (err) throw err;
         console.log(results);
         res.json(results);
