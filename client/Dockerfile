@@ -8,7 +8,7 @@ RUN apt-get install -y git
 
 RUN apt-get install -y nodejs npm
 
-RUN npm install -g bower
+RUN npm install bower
 
 RUN npm install -g grunt-cli
 
