@@ -88,7 +88,12 @@ router.get('/orders', function (req, res) {
 });
 
 router.post('/orders', function (req, res) {
-    console.log(req, res);
+    console.log(req.body);
+    connection.query('INSERT INTO orders VALUES(' + req.body['customerId'] + ', ' + req.body['productId'] + ', ' + req.body['qty'] + ');', function (err, results) {
+        if (err) throw err;
+        console.log(results);
+        res.json(results);
+    });
 });
 
 // more routes for our API will happen here
