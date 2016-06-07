@@ -67,14 +67,14 @@ var router = express.Router();              // get an instance of the express Ro
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/customers', function (req, res) {
-    connection.query("SELECT name, city FROM customer", function (err, results) {
+    connection.query("SELECT id, name, city FROM customer", function (err, results) {
         if (err) throw err;
         res.json(results);
     });
 });
 
 router.get('/products', function (req, res) {
-    connection.query("SELECT name, price FROM product", function (err, results) {
+    connection.query("SELECT id, name, price FROM product", function (err, results) {
         if (err) throw err;
         res.json(results);
     });
