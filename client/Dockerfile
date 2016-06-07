@@ -25,6 +25,6 @@ WORKDIR cld-demo/client
 
 #RUN grunt build --force
 
-RUN cp -R ./dist/* /var/www/
+RUN cp -R ./dist/* /var/www/html/
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

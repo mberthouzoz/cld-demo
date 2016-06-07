@@ -18,4 +18,4 @@ services:
     image: mberthouzoz/cld-client
     ports:
       - "80:80"
-    command: service httpd restart
+    command: /usr/sbin/apachectl -DFOREGROUND
