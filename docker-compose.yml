@@ -8,9 +8,14 @@ services:
     ports:
      - "3306:3306"
   server:
-    image: serveur/.
+    image: mberthouzoz/cld-server
     ports:
       - "8080:8080"
     command: node index
     links:
       - db
+  app:
+    image: mberthouzoz/cld-app
+    ports:
+    - "80:80"
+    command: node index

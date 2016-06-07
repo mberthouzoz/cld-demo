@@ -2,7 +2,9 @@ var express = require('express');        // call express
 var app = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
+var cors = require('cors');
 
+app.use(cors());
 
 var connection = mysql.createConnection({
     host: '192.168.99.100',
@@ -47,13 +49,6 @@ connection.query(sqlCreateTable + product, function (err, res) {
 
 connection.query(sqlCreateTable + order, function (err, res) {
     if (err) throw err;
-});
-
-
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
 });
 
 // configure app to use bodyParser()
