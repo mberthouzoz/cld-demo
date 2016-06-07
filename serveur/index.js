@@ -81,7 +81,7 @@ router.get('/products', function (req, res) {
 });
 
 router.get('/orders', function (req, res) {
-    connection.query("SELECT c.name AS customer, c.id AS customerId, p.name AS product, p.id as productId, o.qty, o.date FROM cld_demo.`order` AS o INNER JOIN cld_demo.`customer` AS c on o.customerId = c.id INNER JOIN cld_demo.`product` AS p on o.productId = p.id;", function (err, results) {
+    connection.query("SELECT c.name AS customer, c.id AS customerId, p.name AS product, p.price AS price, p.id as productId, o.qty, o.date FROM cld_demo.`order` AS o INNER JOIN cld_demo.`customer` AS c on o.customerId = c.id INNER JOIN cld_demo.`product` AS p on o.productId = p.id;", function (err, results) {
         if (err) throw err;
         res.json(results);
     });
