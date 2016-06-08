@@ -5,7 +5,7 @@ var mysql = require('mysql');
 var cors = require('cors');
 
 var connection = mysql.createConnection({
-    host: 'ec2-52-58-242-235.eu-central-1.compute.amazonaws.com',
+    host: '52.58.238.60',
     user: 'root',
     password: '12345',
     database: 'cld_demo'
